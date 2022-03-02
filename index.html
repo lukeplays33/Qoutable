@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<title>Qoutable</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/jpg" href="https://lukeplays33.github.io/Sketch/Images/60d473a38f959300118b9c10-1.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+margin: 0px;
+  height: 100%;
+width: 100%;
+}
+
+.li {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #008dcd; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fab {
+  width: 58px;
+  height: 58px;
+  background-color: #008dcd;
+  border-radius: 50%;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+
+  box-sizing: border-box;
+    z-index: 1;
+}
+
+body {
+background: rgb(238,238,238);
+}
+
+#toast {
+display: none;
+margin: 8px;
+margin-bottom: 0px;
+position: fixed;
+bottom: 0px;
+padding: 0px;
+}
+
+.toasttext {
+background-color: rgba(155, 155, 155, 0.5);
+border-radius: 10px;
+color: white;
+text-align: center;
+font-size 25px;
+padding: 8px;
+font-family: Sans-serif;
+}
+
+#snackbar {
+background-color: rgba(155, 155, 155, 0.5);
+border-radius: 10px;
+width: 100%
+margin: 8px;
+margin-bottom: 0px;
+position: fixed;
+bottom: 0px;
+padding: 0px;
+}
+
+#close {
+position: absolute;
+right: 0px;
+height: 30px;
+width: 30px;
+}
+
+.snackbartext {
+width: 50%;
+color: white;
+text-align: center;
+font-size 25px;
+padding: 8px;
+font-family: Sans-serif;
+}
+
+</style>
+<body>
+<div id="toast">
+<p id="toasttext" class="toasttext" >EEEEEEEEEEEEEEE</p>
+</div>
+
+<div id="snackbar">
+<p id="snackbarText" class="snackbartext" >EEEEEEEEEEEEEEE</p>
+<div id="close">
+<img src="https://media.discordapp.net/attachments/898978597996466189/946430018463105064/round_close_white_24dp.png">
+</div>
+</div>
+
+</body>
+<script type="module">
+const reader = new FileReader();
+let spalsh = document.createElement('img');
+spalsh.src = "https://media.discordapp.net/attachments/898978597996466189/900743720905900032/60d473a38f959300118b9c10.png";
+spalsh.style.width = '35px';
+spalsh.style.height = '35px';
+spalsh.style.margin = '8px';
+spalsh.style.position = 'fixed';
+document.body.appendChild(spalsh);
+spalsh.onclick = function () {
+window.open("https://lukeplays33.github.io/Sketch/");
+}
+var kccb = '';
+var dateManager = new Date();
+var start, end
+function changeGamepadAPiButton () {
+var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads : []);
+var gp = gamepads[0];
+for (var i = 0; i < gp.buttons.length; i++) {
+if (gp.buttons[i] == 0 || gp.buttons[i].value > 0 || gp.buttons[i].pressed == true) {
+buttonChange(i,0 ,0);
+}
+}
+for (var i = 0; i < gp.axes.length; i++) {
+if (gp.axes[i] != 0){
+buttonChange(0,i,gp.axes[i]);
+}
+}
+kccb = window.requestAnimationFrame(changeGamepadAPiButton);
+}
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+window.addEventListener(`load`, e => {
+  {
+  let ElementId = document.createElement('p');
+  ElementId.innerHTML = 'I am a paragraph, oh yes I am';
+  ElementId.onclick = function () {
+  eventpclick(ElementId);
+  }
+  ElementId.onmousedown = function () {
+  eventpmouseDown(ElementId);
+  }
+  ElementId.onmouseup = function () {
+  eventpmouseUp(ElementId);
+  }
+  ElementId.onmouseover = function () {
+  eventponmouseover(ElementId);
+  }
+  ElementId.className = 'p'
+    document.body.appendChild(ElementId);
+    ElementId.style.position = 'absolute';
+    ElementId.style.top = '40%';
+    ElementId.style.width = '100%';
+    ElementId.style.textAlign = 'center';
+    ElementId.style.fontFamily = 'sans-serif';
+    ElementId.style.fontSize = '20px';
+    name2 = ElementId;
+
+  }
+  {
+  let ElementId = document.createElement('button');
+  ElementId.innerHTML = 'Never gonna give you up, Never gonna let you down';
+  ElementId.onclick = function () {
+  eventbclick(ElementId);
+  }
+  ElementId.onmousedown = function () {
+  eventbmouseDown(ElementId);
+  }
+  ElementId.onmouseup = function () {
+  eventbmouseUp(ElementId);
+  }
+  ElementId.onmouseover = function () {
+  eventbonmouseover(ElementId);
+  }
+  ElementId.className = 'b'
+    name = ElementId;
+    ElementId.click();document.body.appendChild(ElementId);
+    ElementId.style.position = 'absolute';
+    ElementId.style.bottom = '8px';
+    ElementId.style.left = '35%';
+    ElementId.style.textAlign = 'center';
+    ElementId.style.fontFamily = 'sans-serif';
+    ElementId.innerHTML = 'New Qoute';
+    ElementId.style.fontSize = '20px';
+    ElementId.style.color = '#ffffff';
+    ElementId.style.borderStyle = 'solid';
+    ElementId.style.borderRadius = '10px';
+    ElementId.style.borderWidth = '0px';
+    ElementId.style.backgroundColor = '#008dcd';
+    ElementId.style.padding = '8px';
+
+  }
+  {
+  let ElementId = document.createElement('img');
+  ElementId.src = 'https://i.kym-cdn.com/photos/images/newsfeed/001/473/342/633.png';
+  ElementId.onclick = function () {
+  eventiclick(ElementId);
+  }
+  ElementId.onmousedown = function () {
+  eventimouseDown(ElementId);
+  }
+  ElementId.onmouseup = function () {
+  eventimouseUp(ElementId);
+  }
+  ElementId.onmouseover = function () {
+  eventionmouseover(ElementId);
+  }
+  ElementId.className = 'i'
+    document.body.appendChild(ElementId);
+    ElementId.src = 'https://media.discordapp.net/attachments/898978597996466189/947135084266397726/round_share_black_24dp.png';
+    ElementId.style.position = 'fixed';
+    ElementId.style.right = '0px';
+    ElementId.style.padding = '8px';
+    ElementId.style.paddingTop = '10px';
+    ElementId.style.objectFit = 'contain';
+    ElementId.style.width = '35px';
+    ElementId.style.height = '35px';
+
+  }
+  document.getElementById("snackbar").style.display = "none";
+
+});
+var name = 0;
+
+var name2 = 0;
+
+function eventbclick (ElementId) {
+  fetch('https://api.quotable.io/random', {
+      method: 'GET',
+   mode: 'cors', // no-cors, *cors, same-origin
+   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  credentials: 'same-origin',
+  })
+  .then(data => data.json())
+  .then(result => {
+   let r = result
+  let Status = result.status
+  let Error2 = 'No errors'
+    name2.innerHTML = ([r['content'],'\r\n',' ~ ','\r\n',r['author']].join(''));
+
+  })
+  .catch(Error2 => {
+   let r = 'No Data'
+  let Status = data.status
+    name2.innerHTML = ([r['content'],'\r\n',' ~ ','\r\n',r['author']].join(''));
+  });
+
+}
+
+function eventiclick (ElementId) {
+  navigator.share({
+  'title':'Share Qoutable',
+  'text':([name2.innerHTML,'\r\n','This Qoute was taken from Qoutable '].join('')),
+  'url':([name2.innerHTML,'\r\n','This Qoute was taken from Qoutable: '].join('')),
+  });
+
+}
+</script>
