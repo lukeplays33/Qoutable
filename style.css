@@ -28,7 +28,7 @@ b {
 
     max-width: 80%;
 
-    font-size: 5vh;
+    font-size: 20px;
 }
 
 #refresh {
@@ -43,7 +43,7 @@ b {
     padding: 4px;
 
     padding-top: 0.55vh;
-    font-size: 5vh;
+    font-size: 20px;
 }
 
 @keyframes rotating {
