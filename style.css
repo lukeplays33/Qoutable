@@ -1,0 +1,61 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    background-color: TRANSPARENT;
+}
+
+body {
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--primaryTextColor);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#qoute,
+b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 80%;
+
+    font-size: 3vh;
+}
+
+#refresh {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    background-color: var(--secondairy);
+    color: var(--secondairyTextColor);
+
+    border-radius: 200px;
+
+    padding: 4px;
+
+    padding-top: 0.55vh;
+    font-size: 3vh;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.rotating {
+    animation: rotating linear 0.5s;
+}
